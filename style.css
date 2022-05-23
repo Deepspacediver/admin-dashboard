@@ -1,0 +1,50 @@
+:root{
+        font-size: 15px;
+      
+}
+body{
+    width: 100vw;
+    height: 100vw;
+    display: flex;
+}
+.page-wrapper{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1.6fr 6fr;
+    grid-template-rows: 1fr 8.2fr;
+}
+.sidebar{
+    background-color: blue;
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-rows: 0fr;
+    gap: 2vw;
+}
+.header{
+    background-color: red;
+    grid-column: 2 / 3;
+}
+.content-space{
+    background-color: pink;
+    grid-column: 2 / 3;
+}
+.sidebar .side-logo, 
+.sidebar .side-nav,
+.sidebar .side-settings{
+    grid-column: 1 / 2;
+    margin-left: 15px;
+    font-size: max(22px, 1vw);
+    display: grid;
+    gap: .5vw;
+}
+.sidebar div{
+    color: white;
+}
+
+.side-header{
+    margin-top: 15px;
+    font-size: max(28px, 2.5vw);
+}
