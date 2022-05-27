@@ -3,15 +3,16 @@
       
 }
 body{
+    margin: 0;
     width: 100vw;
-    height: 100vw;
+    height: 100vh;
     display: flex;
 }
 .page-wrapper{
-    width: 100%;
+    width: 100vw;
     display: grid;
     grid-template-columns: 1.6fr 6fr;
-    grid-template-rows: 1fr 8.2fr;
+    grid-template-rows: 1fr 4.5fr;
 }
 .sidebar{
     background-color: blue;
@@ -23,10 +24,6 @@ body{
     grid-auto-rows: 0fr;
     gap: 2vw;
 }
-.header{
-    background-color: red;
-    grid-column: 2 / 3;
-}
 .content-space{
     background-color: pink;
     grid-column: 2 / 3;
@@ -36,15 +33,70 @@ body{
 .sidebar .side-settings{
     grid-column: 1 / 2;
     margin-left: 15px;
-    font-size: max(22px, 1vw);
+    font-size: max(10px, 1.5vw);
     display: grid;
     gap: .5vw;
 }
 .sidebar div{
     color: white;
 }
-
 .side-header{
     margin-top: 15px;
-    font-size: max(28px, 2.5vw);
+    font-size: max(28px, 2vw);
+}
+
+.header-wrapper{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    align-items: center;
+}
+img{
+    max-height: 100%;
+    width: 3vw;
+}
+
+.top-wrapper{
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    align-items: center;
+    padding-left: 20px;
+}
+.search-wrapper{
+    display: grid;
+    justify-items: flex-start;
+    grid-template-columns: 0.2fr 2fr 1fr;
+    gap: 10px;
+}
+
+input[type='search']{
+    width: 40vw;
+}
+.user-account-wrapper{
+    grid-template-columns: 1fr 1fr;
+    display: grid;
+}
+
+.bottom-wrapper{
+    display: grid;
+    grid-template-columns: 1fr 14fr;
+}
+
+.action-wrapper{
+    display: grid;
+    align-items: center;
+}
+
+.greeting{
+    grid-column: 1/2;
+}
+
+ul{
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.user-name{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
