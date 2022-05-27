@@ -100,3 +100,23 @@ ul{
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
+
+.content-space{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+}
+
+.left_side-content{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 2fr 2fr 2fr;
+}
+
+.left_side-heading{
+    grid-column: 1 / 3;
+}
+
+.right_side-content{
+    display: grid;
+    grid-template-rows: 1fr 3fr 1fr 3fr;
+}
