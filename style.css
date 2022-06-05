@@ -6,17 +6,17 @@ html{
 
     margin: 0;
     padding: 0;
+
 }
 body{
-
     height: 100vh;
     width: 100vw;
     margin: 0;
     padding: 0;
 }
 .page-wrapper{
-    height: 100%;
     width: 100%;
+    height: 100%;
     display: grid;
     grid-template-columns: 1fr 5fr;
     grid-template-rows: 1fr 4fr;
@@ -25,33 +25,46 @@ body{
 .sidebar{
     background-color: blue;
     grid-row: 1 / 3;
-    grid-column: 1/2;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-auto-rows: 0fr;
+    grid-template-columns: 1fr; 
+    grid-template-rows: .5fr 1fr 1fr 5fr;
     gap: 2vw;
 }
 
-.sidebar .side-logo, 
-.sidebar .side-nav,
-.sidebar .side-settings{
-    grid-column: 1 / 2;
-    margin-left: 15px;
-    font-size: max(10px, 1.5vw);
-    display: grid;
-    gap: .5vw;
+ .nav-tabs{ 
+    gap: 20px;
+    display: flex;
+    margin: .5rem 2rem 0 2rem;
+}
+
+.nav-tabs.logo img{
+    height: auto;
+    max-width: 100%;
+    flex-grow: 1;
+
+    flex-basis: 25%
+}
+.nav-tabs img{
+    max-width: 15%;
+    height: auto;
+}
+.nav-tabs span{
+    font-size:  1vw;
+    align-self: center;
+    font-weight: bold;
+}
+.nav-tabs.logo span{
+    font-size: 1.5vw;
+    flex-grow: 1;
+    margin-right: 2rem;
 }
 .sidebar div{
     color: white;
 }
-.side-header{
-    margin-top: 15px;
-    font-size: max(28px, 2vw)15;
-}
 
 .header-wrapper{
     display: grid;
-    grid-template-rows: 1fr 1.5fr;15
+    grid-template-rows: 1fr 1.5fr;
     align-items: center;
     padding: 5px 4vw 5px 2vw;
     gap: 5px;
@@ -111,8 +124,11 @@ input[type='search']:focus{
 
 .greeting{
     grid-column: 1/3;
-
+    font-weight: bold;
     align-self: center;
+}
+.user-name div{
+    font-weight: bold;
 }
 
 ul{
@@ -141,19 +157,18 @@ li{
 .content-space{
     display: grid;
     grid-template-columns: 3fr 1fr;
-    background-color: pink;
-    padding-bottom: 5vh;
+    padding: 0 3rem 5vh 3rem;
     gap: 2rem;
+    background-color: rgb(217, 229, 240);
 }
 
 
 .left_side-content{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
-    grid-template-rows: .8fr;
+    grid-template-rows:.7fr;
     grid-auto-rows: 4.5fr;
     gap: 15px;
-    padding-left: 3rem;
     font-size: 2rem;
     /* 
     align-items: center;
@@ -167,9 +182,11 @@ li{
 
 .left_side-heading{
     grid-column: 1 / -1;
-    align-self: center;
+    align-self: flex-end;
+    font-weight: bold;
     /* align-self: flex-end;
     grid-column: 1 / 3; */
+
 }
 .project-wrapper{
     border-left: 8px solid orange;
@@ -186,8 +203,9 @@ li{
     overflow: hidden;
     min-width: 0; */
 }
-
-
+.project-heading{
+    font-weight: bold;
+}
 
 .project-action-buttons{
     display: flex;
@@ -204,28 +222,84 @@ li{
     max-height: 100%;
 }
 .right_side-content{
+    height: 100%;
     display: grid;
     grid-template-rows: 1fr 1fr;
-    font-size: 0.85rem;
+    font-size: 1.7rem;
+    gap: 10px;
 }
 
 .announcement-content-wrapper{
-    display: grid;
     align-items: center;
-    background-color: green;
+    display: flex;
+    flex-direction: column;
+}
+.panel-wrapper{
+    display: grid;
+    height: 100%;
+    grid-template-rows: repeat(auto-fit, minmax(50px, 1fr));
+    background-color: white;
+    border-radius: 10px;
+    box-sizing: border-box;
 
+   padding: 2rem 3rem;
+}
+.announcement-panel{
+   display: grid;
+   font-size: 1.5rem;
+   box-sizing: border-box;
+}
+.announcement-heading{
+    font-weight: bold;
+    font-size: 1.75rem;
+}
+.announcement-content{
+    display:flex;
+    overflow: auto;
+}
+.announcement-panel:nth-child(-n+2){
+    border-bottom: 1px solid black;
 }
 .announcement-header{
-    font-size: 1rem;
-    justify-items: center;
+    align-self: center;
+    padding: 1.5vh;
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 1.5rem;
+    font-weight: bold;
+}
+
+.trending-header{
+    align-self: center;
+    text-align: center;
+    font-weight: bold;
+
+    font-size: 2rem;
+}
+.trending-content-wrapper{
+    display: grid;
+    grid-template-rows: 1fr 6fr;
+}
+.trending-wrapper{
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    align-items: center;
+    padding-left: 2rem;
+    border-radius: 1rem;
+}
+.trending-content{
+    background-color: white;
+    display: grid;
+    border-radius: 15px;
+}
+.trending-wrapper img{
+    justify-self: center;
+    max-height: 100%;
 }
 
 
 
-
-
-.trending-content-wrapper{
-    display: grid;
-    background-color: orange;
-    font-size: 0.85rem;
+.announcement-panel,
+.trending-wrapper{
 }
